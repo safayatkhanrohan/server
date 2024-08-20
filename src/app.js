@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
@@ -36,21 +37,16 @@ cloudinary.config({
 });
 
 // routes
-// app.use("/api/v1", products);
-// app.use("/api/v1", userRouter);
-// app.use("/api/v1", orderRouter);
-// app.use("/api/v1", paymentRouter);
-
-app.use(products);
-app.use(userRouter);
-app.use(orderRouter);
-app.use(paymentRouter);
+app.use("/api/v1", products);
+app.use("/api/v1", userRouter);
+app.use("/api/v1", orderRouter);
+app.use("/api/v1", paymentRouter);
 
 // Middleware to handle errors
 app.use(errorMiddleware);
 
-app.get("/", (req, res) => {
-  res.send("Hello World");
+app.listen(process.env.PORT, () => {
+  console.log(`Server is listening on port ${process.env.PORT}`);
 });
 
 module.exports = app;
