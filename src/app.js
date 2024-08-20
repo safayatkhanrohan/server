@@ -49,4 +49,8 @@ app.use(paymentRouter);
 // Middleware to handle errors
 app.use(errorMiddleware);
 
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
+
 module.exports = app;
