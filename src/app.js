@@ -20,7 +20,8 @@ connectDB();
 //middlewares
 app.use(
   cors({
-    origin: "https://mern-estore.netlify.app",
+    // origin: "https://mern-estore.netlify.app",
+    origin: "https://shopit-1fc10.web.app",
     // origin: "http://localhost:5173",
     credentials: true,
   })
