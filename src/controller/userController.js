@@ -69,6 +69,8 @@ exports.loginUser = catchAsnycErros(async (req, res, next) => {
     httpOnly: true,
   };
 
+  console.log(token);
+
   res.status(200).cookie('token', token, options).json({
     success: true,
     message: "User logged in",

@@ -2,10 +2,10 @@
   "name": "e-commerce",
   "version": "1.0.0",
   "description": "this is an e commerce site",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/index.js",
+    "start": "nodemon src/app.js",
     "seed": "node ./seedr.js"
   },
   "keywords": [],
