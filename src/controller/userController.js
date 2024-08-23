@@ -66,9 +66,7 @@ exports.loginUser = catchAsnycErros(async (req, res, next) => {
   // cookie options
   const options = {
     expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000), // 7 days
-    httpOnly: true,
-    sameSite: 'None',
-    secure: true,
+    httpOnly: true
   };
 
   console.log(token);
