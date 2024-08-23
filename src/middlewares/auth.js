@@ -4,6 +4,7 @@ const ErrorHandler = require("../utils/errorHandler");
 const catchAsnycErros = require("./catchAsnycErros");
 
 exports.isAuthenticated = catchAsnycErros(async(req, res, next) => {
+    console.log(req.cookies);
     const {token} = req.cookies;
     if(!token) {
         return next(new ErrorHandler("Login first to access this resource", 401));
